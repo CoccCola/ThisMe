@@ -4,7 +4,7 @@ var $avatar = $(".avatar");
 var $b = $(".b");
 var $c = $(".c");
 var $wavesdown = $(".wavesdown");
-
+var $introduce = $(".introduce");
 
 var progress = 0;
 var timeout_avatar;
@@ -28,6 +28,10 @@ window.onmousewheel = document.onmousewheel = (e) => {
 			$avatar.css({
 				'opacity': '1',
 				'transform': 'translate(-50%, -50%)',
+			});
+			$introduce.css({
+				'opacity': '1',
+				'top': '57%',
 			});
 			$b.css({
 				"transform": "skewX(0deg) scale(1)",
@@ -57,6 +61,10 @@ window.onmousewheel = document.onmousewheel = (e) => {
 			$avatar.css({
 				'opacity': '0',
 				'transform': 'translate(-50%, 30%)',
+			});
+			$introduce.css({
+				'opacity': '0',
+				'top': '80%',
 			});
 			$b.css({
 				"transform": "skewX(65deg) scale(3)",

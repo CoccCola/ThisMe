@@ -139,8 +139,37 @@
 				75%{ opacity: 0.1;}
 				100%{transform: scale(40); opacity: 0;}
 			}
+			.introduce{
+				position: absolute;
+				top: 65%;
+				left:50%;
+				opacity: 0;
+				transform: translate(-50%,-50%);
+				color: #fff;
+				font-family:"SimHei" ;
+				font-weight: bold;
+				transition: all 2s ease-in;
+			}
+			
 			.introduce ul{
-				
+				display: flex;
+				width: 450px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.introduce ul li{
+				padding: 8px;
+				border-radius: 20px;
+				border: 4px solid #f4f4f499;
+				margin: 5px 5px;
+				transition: all 0.5s ease;
+				user-select: none;
+			}
+			.introduce ul li:hover{
+				color: #666;
+				transform: translateY(-5px);
+				cursor: pointer;
+				box-shadow:0 0 10px #959595 , 0 0 10px #d0d0d0 inset;
 			}
 		</style>
 	</head>
@@ -164,10 +193,13 @@
 			</div>
 			<div class="introduce">
 				<ul>
-					<li>É½¶«¿Æ¼¼´óÑ§</li>
-					<li>¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ</li>
-					<li>WebÇ°¶Ë¿ª·¢</li>
-					<li>Õã½­Ê¡Ì¨ÖİÊĞ</li>
+					
+					<li>å±±ä¸œç§‘æŠ€å¤§å­¦</li>
+					<li>è®¡ç®—æœºç§‘å­¦ä¸æŠ€æœ¯</li>
+					<li>åº”å±Š</li>
+					<li>Webå‰ç«¯å¼€å‘</li>
+					<li>2001</li>
+					<li>æµ™æ±Ÿçœå°å·å¸‚</li>
 					<li>13566825935</li>
 				</ul>
 			</div>
