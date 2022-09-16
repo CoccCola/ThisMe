@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>It's me</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			body{
+				overflow: hidden;
+			}
+			.header {
+				position: relative;
+			}
+
+			.background {
+				background: url(./img/background.jpg) center;
+				background-size: cover;
+				height: 100vh;
+				transition: all ease 2s ;
+			}
+
+			.tsm {
+				position: absolute;
+				top: 38%;
+				left: 50%;
+				transform: translate(-50%, -80%);
+				font-size: 50px;
+				font-weight: bold;
+				color: #f9f9ff;
+				transition: all 1.2s ease-in;
+				user-select: none;
+				z-index: 999;
+			}
+			.tsm:hover {
+				text-shadow: 1px 2px 10px #ffffff;
+			}
+
+			.avatar {
+				position: absolute;
+				top: 0;
+				background: url(./img/avatar.png) center;
+				background-size: cover;
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				top: 38%;
+				left: 50%;
+				transform: translate(-50%, 30%);
+				opacity: 0;
+				transition: all 2.4s ease;
+			}
+			.a {
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			.b {
+				border-top: 2px solid #a4b7e3;
+				border-bottom: 2px solid #a4b7e3;
+				transform: skewX(65deg) scale(3);
+				opacity: 0;
+				/* transition: all 1s ease-in-out; */
+				z-index: 2;
+				border-radius: 50%;
+				transition: all 1.5s ease-in-out;
+			}
+
+			.c {
+				border-right: 2px solid #a4b7e3;
+				border-left: 2px solid #a4b7e3;
+				transform: skewY(-65deg) scale(3);
+				opacity: 0;
+				/* transition: all 1s linear; */
+				z-index: 2;
+				border-radius: 50%;
+				transition: all 1.5s linear;
+			}
+
+
+			.wavesdown{
+				position: absolute;
+				top: 84%;
+				left: 50%;
+				height: 50px;
+				width: 1px;
+				opacity: 1;
+				transition: all 1.5s ease;
+			}
+			.down {				
+				position: absolute;
+				top: -100%;
+				/* left: 50%; */
+				transform: translateX(-50%);
+				font-size: 80px;
+				color: white;
+				text-shadow:  0px 0px 8px rgb(179, 185, 193);
+				transition: all 0.5s;
+				animation: skip 1.2s ease-in infinite alternate -1.2s;
+				z-index: 99;
+				user-select: none;
+				opacity: 0.5;
+			}
+			@keyframes skip{
+				0%{transform: translate(-50%,-15px);}
+				100%{transform: translate(-50%,17px);}
+			}
+			.waves{
+				position: absolute;
+				text-align: center;
+				top: 100%;
+				/* left: 50%; */
+				transform: translate(-50%, 0);
+				width: 10px;
+				z-index: 1;
+			}
+			.wave{
+				position: absolute;
+				border-radius:100%;
+				width: 10px;
+				height: 2px;
+				background-color: #b8cee1;		
+				transition: 1s;
+			}
+			.wave1{animation: wave 7.2s ease-out infinite 0s;}
+			.wave2{animation: wave 7.2s ease-out infinite 2.4s;}
+			.wave3{animation: wave 7.2s ease-out infinite 4.8s;}
+			@keyframes wave{
+				0%{transform: scale(1); opacity: 1;}
+				36%{ opacity: 0.5;}
+				75%{ opacity: 0.1;}
+				100%{transform: scale(40); opacity: 0;}
+			}
+			.introduce ul{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="background"></div>
+			<div class="tsm">About me</div>
+			<div class="wavesdown" >
+				<div class="down">馃</div>
+				<div class="waves">
+					<div class="wave wave1"></div>
+					<div class="wave wave2"></div>
+					<div class="wave wave3"></div>
+					<div class="wave wave4"></div>
+					<div class="wave wave5"></div>
+				</div>
+			</div>			
+			<div class="avatar">
+				<div class="b a"></div>
+				<div class="c a"></div>
+			</div>
+			<div class="introduce">
+				<ul>
+					<li>山东科技大学</li>
+					<li>计算机科学与技术</li>
+					<li>Web前端开发</li>
+					<li>浙江省台州市</li>
+					<li>13566825935</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="sampleReels">
+
+		</div>
+		<script src="./js/jquery-3.6.0.min.js"></script>
+		<script src="./js/index2.js"></script>
+	</body>
+</html>
