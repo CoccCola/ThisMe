@@ -1,0 +1,822 @@
+.my_container {
+	width: 61vw;
+	/* width: 1170px; */
+	margin: 0 auto;
+}
+
+a {
+	display: inline-block;
+	outline: none;
+}
+img{
+	display: block;
+}
+/* 顶部导航栏 */
+nav {
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	box-shadow: 0 0 10px #aaa;
+	background-color: #fff;
+}
+
+nav .item a {
+	color: #000;
+	font-size: 14px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+nav .my_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+nav .logo{
+	flex-basis: 200px;
+} 
+nav .logo{
+	width: 100%;
+}
+nav .nav-items {
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+nav .nav-items .item {
+	padding: 20px 27px;
+}
+
+nav .down-logo {
+	display: inline-block;
+	position: absolute;
+	left: 68px;
+	top: 22px;
+	transition: all 0.3s ease;
+	font-size: 14px;
+	color: #000;
+}
+
+nav .about>ul,
+nav .link>div {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 180px;
+	transform: translateY(-500px);
+	opacity: 0;
+	transition: opacity 0.7s ease;
+}
+
+nav .about>ul>li>a,
+nav .link>div>a {
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 12px 0 12px 22px;
+	background-color: #000;
+	color: #999;
+	outline: none;
+	transition: 0.3s ease;
+	transition-property: padding, opacity;
+}
+
+nav .nav-items .search {
+	padding-left: 0;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+nav .fa-search {
+	color: #000;
+	border-left: #ddd solid 1px;
+	padding-left: 28px;
+
+}
+
+/* 右侧栏 */
+aside {
+	position: fixed;
+	right: 0;
+	bottom: 15%;
+	z-index: 997;
+}
+
+aside ul li .fa {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 12px 12px;
+	text-align: center;
+	border: 1px solid #ddd;
+	width: 40px;
+	border-bottom: none;
+	background-color: #fff;
+	font-size: 18px;
+	color: #666;
+	transition: all 0.3s ease;
+}
+
+aside li:last-child {
+	border-bottom: 1px solid #ddd;
+	;
+}
+
+/* banner */
+.helper {
+	height: 60px;
+}
+
+.banner {
+	height: 700px;
+	background: url(../img/week2/banner1.jpg) no-repeat center;
+	background-size: auto 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.banner .next-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin: 0 20px;
+	text-align: center;
+	line-height: 42px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.banner .next-button .fa {
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* 数据 */
+.data {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 60px 0;
+}
+
+.data .item {
+	flex-basis: 292px;
+
+	text-align: center;
+	border-right: 1px solid #eee;
+}
+
+.data .item:last-child {
+	border: none;
+}
+
+.data .item .number {
+	font-size: 50px;
+	font-family: helveticaneuethn, Arial;
+	vertical-align: text-top;
+	padding-bottom: 7px;
+}
+
+.data .item .unit {
+	font-size: 14px;
+	padding-left: 12px;
+	vertical-align: text-top;
+}
+
+
+/* 服务 */
+.service {
+	background-color: #f7f7f7;
+	padding-top: 46px;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+.service .section_name {
+	font-size: 24px;
+	color: #000;
+
+}
+
+.service .section_name+.en {
+	font-size: 14px;
+	color: #999;
+	padding: 14px 0 38px 0;
+}
+
+.service .next-button {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 338px;
+	z-index: 998;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	line-height: 42px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.service .left {
+	left: 0;
+}
+
+.service .right {
+	right: 0;
+}
+
+.service .next-button .fa {
+	font-size: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.service ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.service ul li {
+	flex-basis: 380px;
+	background-color: #fff;
+	padding: 0 0 45px 0;
+	margin-right: 15px;
+}
+.service ul li:last-child{
+	margin-right: 0;
+} 
+.service ul li .img-box {
+	width: 100%;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.service ul li .img-box img {
+	width: 100%;
+	transition: all 0.3s ease;
+}
+
+.service ul li .introduce {
+	transition: all 0.3s ease;
+}
+
+.service ul li .introduce .title {
+	padding-top: 43px;
+	font-size: 16px;
+	color: #000;
+}
+
+.service ul li .introduce .en {
+	padding: 11px 0 20px 0;
+	color: #999;
+	font-size: 14px;
+}
+
+.service ul li .introduce .detail {
+	padding: 0 38px;
+	font-size: 12px;
+	color: #999;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.service ul li .introduce .button {
+	margin: 0 auto;
+	width: 115px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	margin-top: 32px;
+	padding: 8px 0;
+	font-size: 16px;
+	color: #999;
+	transition: all 0.5s ease;
+}
+
+.service .turn-but {
+	padding-top: 24px;
+}
+
+.service .turn-but span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #999;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.service .turn-but span:first-child {
+	margin-right: 8px;
+}
+
+/* 产品 */
+.product {
+	background-color: #f7f7f7;
+	padding-bottom: 58px;
+	padding-top: 60px;
+	text-align: center;
+}
+
+.product .section_name {
+	font-size: 24px;
+	color: #000;
+
+}
+
+.product .section_name+.en {
+	font-size: 14px;
+	color: #999;
+	padding: 12px 0 38px 0;
+}
+
+.product .menu {
+	width: 540px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 48px;
+}
+
+.product .menu .item a {
+	color: #999;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.product .menu .item .line {
+	position: absolute;
+	bottom: -13px;
+	width: 100%;
+	height: 1px;
+	background-color: #333;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: all 0.3s ease;
+}
+
+.product .products {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.product .products .item {
+	background-color: #fff;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	flex-basis: 450px;
+}
+.product .products .item:last-child{
+	margin-right: 0;
+}
+.product .products .item img {
+	width: 100%;
+}
+
+.product .products .item .product_name {
+	color: #000;
+	font-size: 16px;
+	padding-top: 18px;
+	padding-bottom: 3px;
+}
+
+.product .products .item .introduce {
+	color: #999;
+	font-size: 12px;
+	padding-bottom: 25px;
+}
+.product .products .item .mask::after{
+	content: "";
+	height: 100%;
+	width: 0;
+	display: inline-block;
+	vertical-align: middle;
+} 
+.product .products .item .mask {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	line-height: 50px;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	transition: all 0.3s ease;
+}
+
+.product .products .item .mask .fa {
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background-color: #fff;
+	line-height: 52px;
+	text-align: center;
+	font-size: 20px;
+	transform: translateY(20px);
+	opacity: 0;
+	color: #666;
+	transition: all 0.4s ease;
+}
+
+/* 更多关于公司 */
+.company-more {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: #f7f7f7;
+
+}
+
+.company-more .text-section {
+	flex-basis: 900px;
+	padding: 9% 0 0 4.5%;
+}
+
+.company-more .text-section .section_name {
+	font-size: 32px;
+	color: #666;
+}
+
+.company-more .text-section .detail {
+	font-size: 15px;
+	color: #999;
+	padding: 4px 0 55px 0;
+}
+
+.company-more .text-section .introduce {
+	font-size: 13px;
+	color: #999;	
+	line-height: 26px;
+	width: 88%;
+	margin-bottom: 7%;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;					
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+
+.company-more .text-section a {
+	padding: 11px 48px;
+	border: 1px solid #dadada;
+	border-radius: 30px;
+	transition: all 0.4s ease;
+}
+
+.company-more .text-section a span {
+	color: #000;
+	margin-right: 3px;
+	transition: all 0.4s ease;
+}
+
+.company-more .text-section a i {
+	font-size: 16px;
+	color: #666;
+}
+.company-more .img-box {
+	flex-basis: 948px;
+}
+.company-more .img-box img{
+	width: 100%;
+}
+
+/* 团队 */
+
+.team {
+	background-color: #fff;
+	padding: 57px 0 170px 0;
+	text-align: center;
+}
+
+.team .section_name {
+	font-size: 24px;
+	color: #000;
+
+}
+
+.team .section_name+.en {
+	font-size: 14px;
+	color: #999;
+	padding: 12px 0 38px 0;
+}
+
+.team ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.team ul li {
+	flex-basis: 277px;
+	margin-right: 20px;
+}
+
+.team ul .item img {
+	width: 100%;
+}
+
+.team ul .item .mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	transition: all 0.5s ease;
+}
+
+.team ul .item .introduce {
+	position: absolute;
+	text-align: center;
+	color: #eee;
+	opacity: 0;
+	top: 100%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: all 0.5s ease;
+}
+
+.team ul .item .introduce .name {
+	font-size: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.team ul .item .introduce .job {
+	font-size: 13px;
+}
+.team ul .item .skills-box{
+	width: 100%;
+	box-sizing: border-box;
+	position: absolute;
+	top: 70%;
+	padding: 5%;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.team ul .item .skills {
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #222;
+	padding: 25px 4.5% 0 4.5%;
+	margin-bottom: 28px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+}
+
+.team ul .item .line {
+	width: 90%;
+	height: 1px;
+	position: absolute;
+	background-color: #bbb;
+}
+
+/* 更多 */
+.more {
+	height: 620px;
+	background: url(../img/week2/bg.jpg) center;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+.more img {
+	margin-top: 10px;
+	display: inline;
+}
+
+.more .title {
+	color: #666;
+	font-size: 26px;
+	padding-bottom: 45px;
+}
+
+.more .introduce {
+	margin: 0 auto;
+	/* width: 800px; */
+	padding: 0 15%;
+	font-size: 14px;
+	color: #939393;
+	line-height: 28px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.more a {
+	padding: 12px 45px;
+	border: 1px solid #dadada;
+	border-radius: 30px;
+	background-color: #fff;
+	margin-top: 65px;
+	transition: all 0.4s ease;
+}
+
+.more a span {
+	color: #000;
+	margin-right: 10px;
+	transition: all 0.4s ease;
+}
+
+.more a i {
+	font-size: 16px;
+	color: #666;
+}
+
+/* 新闻 */
+.news {
+	background-color: #f7f7f7;
+	text-align: center;
+	padding: 57px 0 80px 0;
+}
+
+.news .section_name {
+	font-size: 24px;
+	color: #000;
+
+}
+
+.news .section_name+.en {
+	font-size: 14px;
+	color: #999;
+	padding: 12px 0 80px 0;
+}
+
+.news ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.news ul .item {
+	flex-basis: 377px;
+	background-color: #fff;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.news ul .item:last-child {
+	margin-right: 0;
+}
+
+.news ul .item a {
+	width: 100%;
+}
+
+.news .img-box img {
+	width: 100%;
+}
+
+.news ul .item .time {
+	background-color: #fff;
+	padding: 8px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 12px;
+	color: #939393;
+}
+
+.news ul .item .title {
+	font-size: 16px;
+	color: #333;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+.news ul .item .introduce {
+	font-size: 13px;
+	color: #939393;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.news ul .item .text-section {
+	box-sizing: border-box;
+	padding: 24px 20px;
+	width: 100%;
+}
+
+.news ul .item .greyline {
+	height: 1px;
+	background-color: #ccc;
+	margin: 21px 0;
+}
+
+.news ul .item .blackline {
+	top: -22px;
+	height: 1px;
+	background-color: #000;
+	opacity: 0;
+	width: 0;
+	transition: all 0.36s ease;
+}
+
+/* 合作伙伴 */
+.partners ul {
+	padding: 60px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.partners ul:last-child {
+	padding-top: 0;
+}
+
+.partners ul li {
+	flex-basis: 270px;
+	margin-bottom: 20px;
+}
+
+.partners ul img {
+	width: 100%;
+	opacity: 0.8;
+	overflow: hidden;
+}
+
+/* 底部 */
+footer .contact {
+	background-color: #eff1f5;
+}
+
+footer .contact .my_container {
+	padding: 150px 0 200px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+}
+
+footer .contact .company {
+	display: inline-block;
+	width: 370px;
+}
+
+footer .contact .company div {
+	font-size: 16px;
+	color: #666;
+}
+
+footer .contact .company i {
+	font-size: 16px;
+	color: #bbb;
+	margin-top: 20px;
+	margin-right: 20px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 29px;
+	cursor: pointer;
+	transition: all 0.36s ease;
+}
+
+footer .contact .contact-ways ul {
+	flex-basis: 760px;
+	display: inline-block;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+footer .contact .contact-ways li {
+	width: 50%;
+	font-size: 13px;
+	line-height: 26px;
+	color: #989898;
+}
+
+footer .copyright {
+	font-size: 12px;
+	color: #666;
+	padding: 10px;
+}

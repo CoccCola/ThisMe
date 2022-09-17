@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>date</title>
+		<style>
+			fieldset{
+				background-color: rgb(234, 238, 243);
+				text-align: center;
+				width: 560px;
+				margin: 0 auto;
+				padding: 30px;
+				margin-top: 100px;
+			}
+			legend{
+				font-weight: bold;
+				color: #666;
+				font-size: 18px;
+			}
+			ul{
+				padding: 0;
+				list-style: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			ul .t{
+				width: 80px;
+				height: 120px;
+				text-align: center;
+				line-height: 120px;
+				color: #666;
+				font-size: 40px;
+				box-shadow: 8px 10px 20px #66666633,-6px -8px 20px #ffffffee;
+				background-color: #f5f5f8;
+				border-radius: 8px;
+			}
+			
+			ul .sp{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				color: #666;
+				font-size: 40px;
+				text-align: center;
+			}
+			.button{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 50px;
+				margin-bottom: 20px;
+				
+			}
+			.start,.stop{
+				width: 80px;
+				height: 50px;
+				box-shadow: 4px 5px 10px #66666633,-3px -4px 10px #ffffffee;
+				line-height: 50px;
+				color: #666;
+				font-size: 26px;
+				text-align: center;
+				border-radius: 5px;
+				user-select: none;
+			}
+			.start{
+				margin-right: 25px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<fieldset id="">
+			
+			<legend>Time</legend>
+			
+			<ul>
+				<li class="h t"></li>
+				<li class="sp">:</li>
+				<li class="m t"></li>
+				<li class="sp">:</li>
+				<li class="s t"></li>
+				<li class="sp">:</li>
+				<li class="ms t"></li> 
+			</ul>
+			<div class="button">
+				<div class="start">start</div>
+				<div class="stop">stop</div>
+			</div>
+			<script>
+				var oClock = document.querySelector(".clock");
+				var oH = document.querySelector(".h");
+				var oM = document.querySelector(".m");
+				var oS = document.querySelector(".s");
+				var oMs = document.querySelector(".ms");
+				var oStart = document.querySelector(".start");
+				var oStop = document.querySelector(".stop");
+				var timer;
+				
+				timer=setInterval(gettime, 24);
+				
+				oStart.style.boxShadow="4px 5px 10px #66666633 inset,-3px -4px 10px #ffffffee inset";
+				oStart.addEventListener("click",function(){
+					clearInterval(timer);   //开前先移除，防止产生多个定时器！！！
+					timer=setInterval(gettime, 24);
+					oStart.style.boxShadow="4px 5px 10px #66666633 inset,-3px -4px 10px #ffffffee inset";
+					oStop.style.boxShadow="4px 5px 10px #66666633,-3px -4px 10px #ffffffee";
+				});
+				oStop.addEventListener("click",function(){
+					clearInterval(timer);
+					oStop.style.boxShadow="4px 5px 10px #66666633 inset,-3px -4px 10px #ffffffee inset";
+					oStart.style.boxShadow="4px 5px 10px #66666633,-3px -4px 10px #ffffffee";
+				});
+
+				function gettime() {
+					var nowDate = new Date();
+					var h=nowDate.getHours();
+					var m=nowDate.getMinutes();
+					var s=nowDate.getSeconds();
+					var ms=nowDate.getMilliseconds();
+					oH.innerHTML=h;
+					oM.innerHTML=m;
+					oS.innerHTML=s;
+					oMs.innerHTML=ms;
+				}
+			</script>
+		</fieldset>
+		<fieldset id="">
+			<legend>Live</legend>
+			<style>
+				.sc{
+					display: inline-block;
+					width: 20px;
+					height: 40px;
+					line-height: 40px;
+					font-size: 32px;
+					padding: 5px 3px;
+					margin: 0 8px;
+					box-shadow: 0 0 10px #66666644;
+					transition: all 0.3s ease;
+					animation: show 1s infinite linear;
+				}
+				@keyframes show{					
+					0%{opacity: 0;
+						transform: translateY(-6px);						
+					}
+					50%{opacity: 1;
+						transform: translateY(0);
+						
+					}
+					100%{opacity: 0;
+						transform: translateY(6px);
+						
+					}
+				}
+			</style>
+			<span class="tick"> </span><span class="sc"></span>
+			<script>
+				function live(){
+					var oTick=document.querySelector(".tick");
+					var oSc=document.querySelector(".sc");
+					var future=new Date("2050-01-02");
+					var past=new Date("2001-7-29");
+					var now=new Date();
+					var rest=now-past;
+					var year=parseInt(rest/(1000*3600*24*365));
+					var mouth=parseInt(rest/(1000*3600*24*30.41)%12);
+					var day=parseInt((rest/(1000*3600*24))%30.41666);
+					var hour=parseInt(rest/(1000*3600)%24);
+					var min=parseInt(rest/(1000*60)%60);
+					var sec=parseInt(rest/(1000)%60);
+					var sec1=parseInt(sec/10);
+					var sec2=parseInt(sec%10);
+					oTick.innerHTML=`${year}年 ${mouth}个月 ${day}天 ${hour}小时 ${min}分钟 ${sec1}`;
+					oSc.innerHTML=sec2;
+				}
+				setInterval(live,1000);
+				
+			</script>
+		</fieldset>
+	</body>
+</html>

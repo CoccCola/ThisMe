@@ -10,18 +10,21 @@
 				padding: 0;
 				list-style: none;
 			}
-			body{
+
+			body {
 				overflow: hidden;
 			}
-			.header {
+
+			.stage1 {
 				position: relative;
+				transition: all ease 2s;
 			}
 
 			.background {
 				background: url(./img/background.jpg) center;
 				background-size: cover;
 				height: 100vh;
-				transition: all ease 2s ;
+				transition: all ease 2s;
 			}
 
 			.tsm {
@@ -36,6 +39,7 @@
 				user-select: none;
 				z-index: 999;
 			}
+
 			.tsm:hover {
 				text-shadow: 1px 2px 10px #ffffff;
 			}
@@ -54,6 +58,7 @@
 				opacity: 0;
 				transition: all 2.4s ease;
 			}
+
 			.a {
 				width: 100%;
 				height: 100%;
@@ -86,7 +91,7 @@
 			}
 
 
-			.wavesdown{
+			.wavesdown {
 				position: absolute;
 				top: 84%;
 				left: 50%;
@@ -95,25 +100,33 @@
 				opacity: 1;
 				transition: all 1.5s ease;
 			}
-			.down {				
+
+			.down {
 				position: absolute;
 				top: -100%;
 				/* left: 50%; */
 				transform: translateX(-50%);
 				font-size: 80px;
 				color: white;
-				text-shadow:  0px 0px 8px rgb(179, 185, 193);
+				text-shadow: 0px 0px 8px rgb(179, 185, 193);
 				transition: all 0.5s;
 				animation: skip 1.2s ease-in infinite alternate -1.2s;
 				z-index: 99;
 				user-select: none;
-				opacity: 0.5;
+				opacity: 0.3;
 			}
-			@keyframes skip{
-				0%{transform: translate(-50%,-15px);}
-				100%{transform: translate(-50%,17px);}
+
+			@keyframes skip {
+				0% {
+					transform: translate(-50%, -15px);
+				}
+
+				100% {
+					transform: translate(-50%, 17px);
+				}
 			}
-			.waves{
+
+			.waves {
 				position: absolute;
 				text-align: center;
 				top: 100%;
@@ -122,42 +135,68 @@
 				width: 10px;
 				z-index: 1;
 			}
-			.wave{
+
+			.wave {
 				position: absolute;
-				border-radius:100%;
+				border-radius: 100%;
 				width: 10px;
 				height: 2px;
-				background-color: #b8cee1;		
+				background-color: #b8cee1;
 				transition: 1s;
 			}
-			.wave1{animation: wave 7.2s ease-out infinite 0s;}
-			.wave2{animation: wave 7.2s ease-out infinite 2.4s;}
-			.wave3{animation: wave 7.2s ease-out infinite 4.8s;}
-			@keyframes wave{
-				0%{transform: scale(1); opacity: 1;}
-				36%{ opacity: 0.5;}
-				75%{ opacity: 0.1;}
-				100%{transform: scale(40); opacity: 0;}
+
+			.wave1 {
+				animation: wave 7.2s ease-out infinite 0s;
 			}
-			.introduce{
+
+			.wave2 {
+				animation: wave 7.2s ease-out infinite 2.4s;
+			}
+
+			.wave3 {
+				animation: wave 7.2s ease-out infinite 4.8s;
+			}
+
+			@keyframes wave {
+				0% {
+					transform: scale(1);
+					opacity: 1;
+				}
+
+				36% {
+					opacity: 0.5;
+				}
+
+				75% {
+					opacity: 0.1;
+				}
+
+				100% {
+					transform: scale(40);
+					opacity: 0;
+				}
+			}
+
+			.introduce {
 				position: absolute;
 				top: 65%;
-				left:50%;
+				left: 50%;
 				opacity: 0;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%, -50%);
 				color: #fff;
-				font-family:"SimHei" ;
+				font-family: "SimHei";
 				font-weight: bold;
-				transition: all 2s ease-in;
+				transition: all 2.4s ease-in-out;
 			}
-			
-			.introduce ul{
+
+			.introduce ul {
 				display: flex;
 				width: 450px;
 				flex-wrap: wrap;
 				justify-content: center;
 			}
-			.introduce ul li{
+
+			.introduce ul li {
 				padding: 8px;
 				border-radius: 20px;
 				border: 4px solid #f4f4f499;
@@ -165,19 +204,80 @@
 				transition: all 0.5s ease;
 				user-select: none;
 			}
-			.introduce ul li:hover{
+
+			.introduce ul li:hover {
 				color: #666;
 				transform: translateY(-5px);
 				cursor: pointer;
-				box-shadow:0 0 10px #959595 , 0 0 10px #d0d0d0 inset;
+				box-shadow: 0 0 10px #959595, 0 0 10px #d0d0d0 inset;
+			}
+
+			.stage1 {
+				/* display: none; */
+				z-index: 1;
+			}
+
+			.stage2 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;				
+				height: 100vh;
+				transition: all ease 2s;
+				opacity: 0;
+				/* display: none; */
+				z-index: 0;
+			}
+
+			.stage2 ul {
+				display: flex;
+				position: relative;
+				top: 15vh;
+				transition: all ease 2s;
+			}
+
+
+			.stage2 ul li a {
+				display: inline-block;
+				width: 5vw;
+				height: 27vw;
+				/* background-color: #666; */
+				border: 2px double #c2c2c2;
+				border-radius: 2.5vw;
+				margin: 0 2px;
+				box-shadow: 0 0 5px #99999966;
+				transition: all 0.5s ease-in-out 0.1s;
+				background: center center;
+				background-size: cover;
+			}
+			.text{
+				text-align: center;
+				opacity: 0;
+				transform: translateY(-200%);
+				color: #959595;
+				font-family: "SimHei";
+				font-weight: bold;
+				user-select: none;
+				transition: all 0.8s ease 0.2s;
+			}
+			.stage2 ul li:hover>a {
+				width: 12vw;
+
+			}			
+			.stage2 ul li:hover>.text{
+				opacity: 1;
+				transform: translateY(40%);
 			}
 		</style>
 	</head>
 	<body>
-		<div class="header">
+		<div class="stage1">
 			<div class="background"></div>
 			<div class="tsm">About me</div>
-			<div class="wavesdown" >
+			<div class="wavesdown">
 				<div class="down">🢛</div>
 				<div class="waves">
 					<div class="wave wave1"></div>
@@ -186,14 +286,14 @@
 					<div class="wave wave4"></div>
 					<div class="wave wave5"></div>
 				</div>
-			</div>			
+			</div>
 			<div class="avatar">
 				<div class="b a"></div>
 				<div class="c a"></div>
 			</div>
 			<div class="introduce">
 				<ul>
-					
+
 					<li>山东科技大学</li>
 					<li>计算机科学与技术</li>
 					<li>应届</li>
@@ -204,11 +304,36 @@
 				</ul>
 			</div>
 		</div>
-		
-		<div class="sampleReels">
 
+		<div class="stage2">
+			<ul>
+				<li>
+					<a href="./facsimile1.html" style="background-image: url(./img/project_img/p1.jpg);"></a>
+					<div class="text">临摹</div>
+				</li>
+				<li>
+					<a href="./facsimile2.html" style="background-image: url(./img/project_img/p2.jpg);"></a>
+					<div class="text">临摹</div>
+				</li>
+				<li>
+					<a href="./time.html" style="background-image: url(./img/project_img/p2.jpg);"></a>
+					<div class="text">Time</div>
+				</li>
+				<li>
+					<a href="https://cocccola.github.io/UI_try/" style="background-image: url(./img/project_img/p3.jpg);"></a>
+					<div class="text">W&nbsp;&nbsp;|&nbsp;&nbsp;I</div>
+				</li>
+				<li>
+					<a href="https://cocccola.github.io/Benjia/" style="background-image: url(./img/project_img/p4.jpg);"></a>
+					<div class="text">本家商城</div>
+				</li>
+				<li>
+					<a href="" style="background-image: url(./img/project_img/p5.jpg);"></a>
+					<div class="text">小社区管理系统</div>
+				</li>
+			</ul>
 		</div>
 		<script src="./js/jquery-3.6.0.min.js"></script>
-		<script src="./js/index2.js"></script>
+		<script src="./js/index.js"></script>
 	</body>
 </html>

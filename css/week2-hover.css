@@ -1,0 +1,139 @@
+nav .item:hover>a {
+	color: #888;
+}
+
+nav .item>a:focus {
+	color: #888;
+}
+
+nav .item:hover>.down-logo {
+	color: #fff;
+}
+
+nav .item>a:hover>.down-logo {
+	color: #fff;
+}
+
+nav .about:hover>ul {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+nav .link:hover>div {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+nav .about ul li:hover>a,
+nav .link div:hover>a {
+	padding-left: 28px;
+	color: #fff;
+}
+
+.banner .next-button:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.service .next-button:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.service ul li:hover .img-box {
+	transform: scale(0.94);
+}
+
+.service ul li:hover .img-box>img {
+	transform: scale(1.15);
+}
+
+.service ul li:hover .introduce {
+	transform: translateY(-8px);
+}
+
+.service ul li:hover .button {
+	background-color: #333;
+	color: #fff;
+}
+
+.service .turn-but span:hover,
+.service .turn-but span:focus {
+	background-color: #888;
+}
+
+
+aside ul li .fa:hover {
+	background-color: #333;
+	color: #eee;
+}
+
+.product .menu .item a:hover+.line {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.product .products .item a:hover .mask {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.product .products .item a:hover .mask>.fa {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.company-more .text-section a:hover {
+	background-color: #222;
+	border: 1px solid #222;
+}
+
+.company-more .text-section a:hover>span {
+	color: #eee;
+}
+
+.team ul .item a:hover .mask {
+	background-color: rgba(0, 0, 0, 0.55);
+}
+
+.team ul .item a:hover .introduce {
+	opacity: 1;
+	top: 40%;
+}
+
+.team ul .item a:hover .skills-box {
+	opacity: 1;
+	top: 92%;
+}
+
+
+.more a:hover {
+	background-color: #000;
+}
+
+.more a:hover>span {
+	color: #fff;
+}
+
+.news ul .item>a:hover .blackline {
+	width: 100%;
+	opacity: 1;
+}
+
+footer .contact .company i:hover {
+	background-color: #333;
+	color: #eee;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+	width: 5px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+	/* border-radius: 10px; */
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background: rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
